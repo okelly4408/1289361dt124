@@ -1,0 +1,27 @@
+MaterialDef GroundFromAtmosphere {
+
+    MaterialParameters {
+        Texture2D screen
+    }
+
+
+    Technique {
+        VertexShader GLSL110: Post_Vert.glsl
+        FragmentShader GLSL110: Post_Frag.glsl
+
+        WorldParameters {
+            WorldViewProjectionMatrix
+            WorldMatrix
+            Position
+            Normal
+        }
+
+        RenderState {
+            Blend Alpha
+            FaceCull Back
+            DepthTest On
+            DepthWrite On
+        }
+    }
+
+}

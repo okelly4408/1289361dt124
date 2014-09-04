@@ -1,0 +1,57 @@
+MaterialDef My MaterialDef{
+
+MaterialParameters{
+
+Vector3 faceOffset
+Float Size
+Texture2D permutationTexture
+Texture2D gradientTexture
+Texture2D altpermutationTexture
+Texture2D altgradientTexture
+Texture2D cellRandTex
+Float Gain
+Float Amp
+Float Off
+Float H
+Float lac
+Float worldSize
+Float denom1
+Float denom2
+Vector3 meshOffset
+Int t
+Float num_terraces
+Float terrace_slope
+Float cont_upper
+Float cont_lower
+Float cont_frequency
+Float hmf_h
+Float hmf_lac
+Float hmf_off
+Float fbm_lac
+Float fbm_pers
+Float mount_upper
+Float mount_lower
+Float rim_width
+Float depth
+Float radius
+Float slope
+Float octaves
+Float crater_frequency
+Boolean mars
+}
+
+Technique{
+VertexShader GLSL110: Noise_V.glsl
+FragmentShader GLSL110: Noise_P.glsl
+
+WorldParameters{
+WorldViewProjectionMatrix
+WorldMatrix
+NormalMatrix
+Normal
+Time
+}
+Defines {
+}
+}
+}
